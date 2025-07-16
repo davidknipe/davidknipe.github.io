@@ -1,139 +1,3 @@
-var styles = `
-
-  /* Styles for the AI assistant */
-        .ai-assistant-icon {
-            position: absolute;
-            right: 8px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            z-index: 1000;
-            border-radius: 3px;
-            padding: 2px;
-            transition: background-color 0.2s ease;
-        }
-
-        .ai-assistant-icon:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-
-        .ai-assistant-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .ai-menu {
-            position: absolute;
-            background: white;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            z-index: 10000;
-            min-width: 180px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            font-size: 14px;
-            padding: 4px 0;
-            display: none;
-        }
-
-        .ai-menu-item {
-            padding: 8px 12px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #333;
-            position: relative;
-        }
-
-        .ai-menu-item:hover {
-            background-color: #f5f5f5;
-        }
-
-        .ai-menu-item.has-submenu::after {
-            content: '▶';
-            color: #666;
-            font-size: 10px;
-            margin-left: auto;
-        }
-
-        .ai-submenu {
-            position: absolute;
-            left: 100%;
-            top: 0;
-            background: white;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            min-width: 120px;
-            padding: 4px 0;
-            display: none;
-        }
-
-        .ai-submenu .ai-menu-item {
-            padding: 6px 12px;
-        }
-
-        .ai-menu-item:hover .ai-submenu {
-            display: block;
-        }
-
-        /* Ensure input containers have relative positioning */
-        .ai-input-container {
-            position: relative !important;
-            display: inline-block;
-            width: 100%;
-        }
-
-        /* Adjust input padding to make room for icon */
-        .ai-enhanced-input {
-            padding-right: 32px !important;
-        }
-
-        /* Demo styles for the example */
-        .demo-container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-
-        .content-edit__wrapper {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 8px;
-            background: #f9f9f9;
-        }
-
-        .demo-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin: 10px 0;
-            font-size: 14px;
-        }
-
-        .demo-title {
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .demo-description {
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-`
-
-var styleSheet = document.createElement("style")
-styleSheet.textContent = styles
-document.head.appendChild(styleSheet)
-
 (function() {
             'use strict';
 
@@ -486,3 +350,139 @@ document.head.appendChild(styleSheet)
             };
 
         })();
+
+var styles = `
+
+  /* Styles for the AI assistant */
+        .ai-assistant-icon {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 3px;
+            padding: 2px;
+            transition: background-color 0.2s ease;
+        }
+
+        .ai-assistant-icon:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .ai-assistant-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .ai-menu {
+            position: absolute;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 10000;
+            min-width: 180px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+            padding: 4px 0;
+            display: none;
+        }
+
+        .ai-menu-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #333;
+            position: relative;
+        }
+
+        .ai-menu-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .ai-menu-item.has-submenu::after {
+            content: '▶';
+            color: #666;
+            font-size: 10px;
+            margin-left: auto;
+        }
+
+        .ai-submenu {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            min-width: 120px;
+            padding: 4px 0;
+            display: none;
+        }
+
+        .ai-submenu .ai-menu-item {
+            padding: 6px 12px;
+        }
+
+        .ai-menu-item:hover .ai-submenu {
+            display: block;
+        }
+
+        /* Ensure input containers have relative positioning */
+        .ai-input-container {
+            position: relative !important;
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* Adjust input padding to make room for icon */
+        .ai-enhanced-input {
+            padding-right: 32px !important;
+        }
+
+        /* Demo styles for the example */
+        .demo-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .content-edit__wrapper {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        .demo-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        .demo-title {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .demo-description {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+`
+
+var styleSheet = document.createElement("style")
+styleSheet.textContent = styles
+document.head.appendChild(styleSheet)
