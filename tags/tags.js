@@ -1043,7 +1043,7 @@ class TagSelectorInjector {
         
         this.options = {
             // Selector pattern for matching textboxes - make this more specific
-            namePattern: 'SeoSettings.tags',
+            namePattern: 'seosettings.tags',
             // How often to check for new textboxes (ms)
             pollInterval: 1000,
             // CSS class to mark processed textboxes
@@ -1243,10 +1243,10 @@ class TagSelectorInjector {
         const textboxes = document.querySelectorAll(selector);
 
         textboxes.forEach(textbox => {
-            // Additional check: make sure the name contains "SeoSettings" and "tags"
+            // Additional check: make sure the name contains "seosettings" and "tags"
             if (textbox.name && 
-                textbox.name.includes('SeoSettings') && 
-                textbox.name.includes('tags') &&
+                textbox.name.toLowerCase().includes('seosettings') && 
+                textbox.name.toLowerCase().includes('tags') &&
                 !textbox.classList.contains(this.options.processedClass)) {
                 this.enableTagSelector(textbox);
             }
@@ -2357,7 +2357,7 @@ class TagSelectorInjector {
 
     // Method to programmatically open tag selector for a specific textbox
     openForTextbox(textbox) {
-        if (textbox && textbox.name && textbox.name.includes(this.options.namePattern)) {
+        if (textbox && textbox.name && textbox.name.toLowerCase().includes(this.options.namePattern)) {
             this.openTagSelector(textbox);
         }
     }
