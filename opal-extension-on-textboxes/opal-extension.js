@@ -234,6 +234,11 @@
                             return;
                         }
                         
+                        // Skip inputs with class "dijitArrowButtonInner"
+                        if (input.classList.contains('dijitArrowButtonInner')) {
+                            return;
+                        }
+                        
                         if (!input.closest('.ai-input-container')) {
                             wrapInput(input);
                         }
@@ -483,6 +488,8 @@ var styles = `
 
 `
 
-var styleSheet = document.createElement("style")
-styleSheet.textContent = styles
-document.head.appendChild(styleSheet)
+setTimeout(() => {
+	var styleSheet = document.createElement("style")
+	styleSheet.textContent = styles
+	document.head.appendChild(styleSheet)	
+}, 1000);
