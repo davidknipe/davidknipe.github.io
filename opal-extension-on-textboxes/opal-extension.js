@@ -227,7 +227,7 @@
                 const contentWrappers = document.querySelectorAll('.content-edit__wrapper');
                 
                 contentWrappers.forEach(wrapper => {
-                    const textInputs = wrapper.querySelectorAll('input[type="text"]');
+                    const textInputs = wrapper.querySelectorAll('input[type="text"]:not(.oui-text-input)');
                     textInputs.forEach(input => {
                         // Skip inputs whose name ends with "tags"
                         if (input.name && input.name.toLowerCase().endsWith('tags')) {
